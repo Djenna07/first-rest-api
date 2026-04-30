@@ -1,13 +1,13 @@
 # First REST API - Spring Boot
 
-## 📌 Overview
+-Overview
 
 This project is a RESTful API developed using Spring Boot.
 It implements basic CRUD operations for managing products and demonstrates backend development fundamentals including database integration and API documentation.
 
 ---
 
-## 🚀 Features
+ -Features
 
 * Create a new product
 * Retrieve all products
@@ -17,7 +17,7 @@ It implements basic CRUD operations for managing products and demonstrates backe
 
 ---
 
-## 🛠 Technologies
+ -Technologies
 
 * Java
 * Spring Boot
@@ -28,7 +28,7 @@ It implements basic CRUD operations for managing products and demonstrates backe
 
 ---
 
-## 📂 Project Structure
+  -Project Structure
 
 ```plaintext
 src/main/java/com/djenna/firstrestapi/product/
@@ -41,7 +41,7 @@ src/main/java/com/djenna/firstrestapi/product/
 
 ---
 
-## ▶️ How to Run
+-How to Run
 
 1. Clone the repository:
 
@@ -59,7 +59,7 @@ FirstRestApiApplication.java
 
 ---
 
-## 🌐 API Endpoints
+  -API Endpoints
 
 | Method | Endpoint              | Description       |
 | ------ | --------------------- | ----------------- |
@@ -69,7 +69,7 @@ FirstRestApiApplication.java
 
 ---
 
-## 📊 Swagger UI
+   -Swagger UI
 
 Access the API documentation at:
 
@@ -79,7 +79,7 @@ http://localhost:8080/swagger-ui/index.html
 
 ---
 
-## 🗄 H2 Database
+    -Database
 
 Access the database console at:
 
