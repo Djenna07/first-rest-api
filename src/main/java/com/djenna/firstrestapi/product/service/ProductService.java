@@ -6,6 +6,7 @@ import com.djenna.firstrestapi.product.domain.Product;
 import com.djenna.firstrestapi.product.repository.ProductRepository;
 import com.djenna.firstrestapi.product.support.ProductMapper;
 import org.springframework.stereotype.Service;
+import com.djenna.firstrestapi.product.support.exception.ProductNotFoundException;
 
 import java.util.List;
 
@@ -35,8 +36,28 @@ public class ProductService {
 
     public ProductResponse getById(Long id) {
         Product product = productRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Product not found"));
+                .orElseThrow(() -> new ProductNotFoundException());
 
         return productMapper.toProductResponse(product);
+    }
+
+    public ProductResponse update(Long id, ProductRequest request) {
+
+        Product product = productRepository.findById(id)
+                .orElseThrow(() -> new ProductNotFoundException());
+
+        product.setName(request.getName());
+
+        Product updatedProduct = productRepository.save(product);
+
+        return productMapper.toProductResponse(updatedProduct);
+    }
+
+    public void delete(Long id) {
+
+        Product product = productRepository.findById(id)
+                .orElseThrow(() -> new ProductNotFoundException());
+
+        productRepository.delete(product);
     }
 }
